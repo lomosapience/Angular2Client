@@ -1,0 +1,5 @@
+<div *ngFor="let user of users" class="user">
+  {{user.name}} {{user.groupname}} <span class="badge">{{user.followers}} </span>
+  <button *ngIf="user.followed" class="followed" ng-mouseover="flag = 1">Foollowing</button>
+  <button *ngIf="!user.followed" class="unfollowed" (click)="follow(user.id)">Follow</button>
+</div>

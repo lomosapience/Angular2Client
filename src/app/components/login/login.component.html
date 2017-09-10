@@ -1,0 +1,27 @@
+<div class="login" layout-padding>
+  <h1>
+    Log in
+  </h1>
+
+  <form #loginForm="ngForm">
+    <md-input-container class="md-block" flex="25">
+        <input mdInput type="text" [(ngModel)]="user.username" required name="username"
+               placeholder="Username" [disabled]="disableForm">
+    </md-input-container>
+
+    <md-input-container class="md-block" flex="25">
+        <input mdInput type="password" [(ngModel)]="user.password" required name="password"
+               placeholder="Password" [disabled]="disableForm">
+    </md-input-container>
+
+    <button md-raised-button (click)="login()" color="primary">
+      <span>Login</span>
+      <md-spinner id="loader" *ngIf="disableForm" mode="indeterminate"></md-spinner>
+    </button>
+
+    <div class="error">
+      {{ error }}
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,12 @@
+.login {
+  background-color: #FFF;
+}
+md-spinner {
+  width: 48px;
+  height: 36px;
+}
+
+.error {
+  font-size: 14px;
+  color: #f12121;
+}
